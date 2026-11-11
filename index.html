@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1f3c64">
+<title>OlahIUT - Solusi Pengolahan Data Ilmu Ukur Tanah</title>
+<link rel="icon" href="data:image/jpeg;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind CSS via CDN + palet warna dari logo (navy & emas) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['Poppins', 'system-ui', 'sans-serif'] },
+  colors: {
+    navy: { 50: '#eef3fa', 100: '#d9e4f2', 600: '#2c4f7c', 700: '#1f3c64', 800: '#172f50', 900: '#10233d' },
+    gold: { 300: '#f9d56e', 400: '#f6c244', 500: '#f2b01e', 600: '#d9960c' } } } } };
+</script>
+<!-- SheetJS (ekspor Excel) & jsPDF (ekspor PDF) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+  body { background: radial-gradient(1200px 500px at 50% -100px, #dbe6f4 0%, transparent 70%), linear-gradient(#f6f9fd, #eef3fa); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  .fade-up { animation: fadeUp .5s ease both; }
+  input[type=number]::-webkit-inner-spin-button { opacity: .5; }
+</style>
+</head>
+<body class="font-sans text-slate-800 min-h-screen antialiased">
+
+<!-- NAVBAR -->
+<nav class="sticky top-0 z-30 bg-white/85 backdrop-blur border-b border-navy-100">
+  <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5">
+      <img src="data:image/jpeg;base64,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" alt="Logo OlahIUT" class="h-10 w-10 rounded-xl shadow-sm">
+      <span class="text-xl font-bold tracking-tight text-navy-800">Olah<span class="text-gold-500">IUT</span></span>
+    </a>
+    <span class="hidden sm:block text-sm text-navy-600">Pengolahan Data Ilmu Ukur Tanah &middot; Theodolite</span>
+  </div>
+</nav>
+
+<main class="max-w-6xl mx-auto px-4 py-5 space-y-5">
+  <!-- TAB MENU -->
+  <nav id="tabs" class="flex flex-wrap gap-2">
+    <button data-mode="titik" class="tab"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>Pengukuran Titik</button>
+    <button data-mode="terbuka" class="tab"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l6-8 5 4 7-9"/></svg>Poligon Terbuka</button>
+    <button data-mode="tertutup" class="tab"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 7l9-3 7 6-3 9-12-2z"/></svg>Poligon Tertutup</button>
+  </nav>
+
+  <!-- FORM INPUT -->
+  <section class="bg-white rounded-2xl shadow-lg shadow-navy-700/5 ring-1 ring-navy-100 overflow-hidden">
+    <div class="h-1.5 bg-gradient-to-r from-navy-700 via-navy-600 to-gold-500"></div>
+    <div class="p-5 space-y-4">
+      <p id="desc" class="text-sm text-navy-700 bg-navy-50 border-l-4 border-gold-500 rounded-r-xl px-3 py-2.5"></p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <label class="text-sm font-medium text-navy-800">Jumlah <span id="nLabel">titik</span>
+          <input id="n" type="number" min="1" max="50" value="4" class="mt-1 w-full border border-navy-100 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400">
+        </label>
+        <label class="text-sm font-medium text-navy-800">X<sub>0</sub> (m)
+          <input id="x0" type="text" inputmode="decimal" placeholder="0" class="mt-1 w-full border border-navy-100 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400">
+        </label>
+        <label class="text-sm font-medium text-navy-800">Y<sub>0</sub> (m)
+          <input id="y0" type="text" inputmode="decimal" placeholder="0" class="mt-1 w-full border border-navy-100 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gold-400">
+        </label>
+      </div>
+
+      <!-- Pilihan metode (hanya Poligon Tertutup) -->
+      <div id="methodBox" class="hidden rounded-xl bg-gold-300/20 border border-gold-400/60 p-3 space-y-1.5 text-sm">
+        <label class="flex items-start gap-2"><input type="radio" name="metode" value="sudut" checked class="mt-1 accent-gold-600">
+          <span><b>Metode Sudut Dalam (Backsight - Foresight)</b> &ndash; &beta; dihitung dari selisih bacaan H, dikoreksi, lalu diubah menjadi azimuth.</span></label>
+        <label class="flex items-start gap-2"><input type="radio" name="metode" value="azimuth" class="mt-1 accent-gold-600">
+          <span><b>Metode Azimuth Langsung</b> &ndash; H (arah Utara) dibaca langsung sebagai azimuth, tanpa &beta; dan koreksinya.</span></label>
+      </div>
+      <!-- Pilihan metode (hanya Poligon Terbuka) -->
+      <div id="methodBoxT" class="hidden rounded-xl bg-gold-300/20 border border-gold-400/60 p-3 space-y-1.5 text-sm">
+        <label class="flex items-start gap-2"><input type="radio" name="metodeT" value="backsight" checked class="mt-1 accent-gold-600">
+          <span><b>H berreferensi titik sebelumnya (backsight)</b> &ndash; H sisi pertama = azimuth awal, sisi berikutnya: &alpha;<sub>n</sub> = &alpha;<sub>n-1</sub> &minus; 180&deg; + H.</span></label>
+        <label class="flex items-start gap-2"><input type="radio" name="metodeT" value="azimuth" class="mt-1 accent-gold-600">
+          <span><b>H sudah berupa azimuth</b> &ndash; semua bacaan H langsung dipakai sebagai azimuth sisi tersebut (tanpa perhitungan beruntun).</span></label>
+      </div>
+
+      <p class="text-xs text-slate-500">Satuan jarak/benang dalam meter. Sudut boleh ditulis desimal (<code class="bg-navy-50 px-1 rounded">123.4567</code>) atau derajat-menit-detik (<code class="bg-navy-50 px-1 rounded">123 27 24</code>).</p>
+
+      <div class="overflow-x-auto rounded-xl border border-navy-100">
+        <table class="min-w-full text-sm text-center">
+          <thead id="thead" class="bg-navy-800 text-white"></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="flex flex-wrap gap-2">
+        <button id="btnHitung" class="px-6 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 active:scale-95 transition text-navy-900 font-bold shadow-md shadow-gold-500/30">Hitung</button>
+        <button id="btnContoh" class="px-4 py-2.5 rounded-xl bg-white border border-navy-100 text-navy-700 font-medium hover:bg-navy-50 transition">Isi Data Contoh</button>
+        <button id="btnReset" class="px-4 py-2.5 rounded-xl bg-white border border-navy-100 text-navy-700 font-medium hover:bg-navy-50 transition">Reset</button>
+      </div>
+      <div id="err" class="hidden rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm p-3"></div>
+    </div>
+  </section>
+
+  <!-- HASIL & VISUALISASI -->
+  <section id="result" class="hidden fade-up bg-white rounded-2xl shadow-lg shadow-navy-700/5 ring-1 ring-navy-100 overflow-hidden">
+    <div class="h-1.5 bg-gradient-to-r from-gold-500 via-navy-600 to-navy-700"></div>
+    <div class="p-5 space-y-5">
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-bold text-navy-800">Hasil Perhitungan</h2>
+        <button id="btnExcel" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 transition text-white text-sm font-semibold">Ekspor Excel (.xlsx)</button>
+      </div>
+      <div id="out" class="space-y-5"></div>
+      <div>
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <h3 class="font-semibold text-navy-800 border-l-4 border-gold-500 pl-2">Visualisasi Koordinat (2D)</h3>
+          <button id="btnPdf" class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 transition text-white text-sm font-semibold">Ekspor Gambar (.pdf)</button>
+        </div>
+        <canvas id="cv" class="w-full border border-navy-100 rounded-xl bg-white"></canvas>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="max-w-6xl mx-auto px-4 pb-8 pt-2">
+  <p class="text-center text-xs text-navy-600">&copy; 2026 OlahIUT &middot; Pengolahan Data Ilmu Ukur Tanah &middot; Teknik Sipil, Universitas Tidar</p>
+</footer>
+
+<script>
+/* =====================================================================
+   OlahIUT - Pengolahan Ilmu Ukur Tanah (Vanilla JS)
+   ===================================================================== */
+const D2R = Math.PI / 180;
+const $ = id => document.getElementById(id);
+
+/* ---------- Konfigurasi menu ---------- */
+const MODES = {
+  titik:    { min: 1, label: 'titik',
+              desc: 'Menghitung Jarak Optis (miring & datar), Beda Tinggi (H), Elevasi (Δh) dan koordinat titik. Acuan Utara = 0 set, sehingga bacaan H dipakai sebagai azimuth.' },
+  terbuka:  { min: 1, label: 'sisi',
+              desc: 'Menghitung Jarak Datar, Azimuth (α) dan koordinat poligon terbuka; H bisa berupa bacaan backsight atau sudah azimuth. Jumlah baris = jumlah sisi (titik yang dihasilkan = sisi + 1).' },
+  tertutup: { min: 3, label: 'titik',
+              desc: 'Mengolah bidikan belakang (backsight) & depan (foresight) pada poligon yang kembali ke titik awal: sudut dalam, koreksi, azimuth, koreksi keliling, koordinat, dan luas.' }
+};
+let mode = 'titik';
+let lastPlot = null;
+
+/* ---------- Utilitas sudut & angka ---------- */
+// Membaca sudut: desimal "123.45" atau DMS "123 27 24" / 123°27'24"
+function ang(s) {
+  const str = String(s ?? '').trim();
+  const m = str.replace(',', '.').match(/\d+(\.\d+)?/g);
+  if (!m) return NaN;
+  const v = m.map(Number);
+  return (str.startsWith('-') ? -1 : 1) * (v[0] + (v[1] || 0) / 60 + (v[2] || 0) / 3600);
+}
+// Membaca angka biasa (koma dianggap desimal)
+const num = s => { const t = String(s ?? '').trim().replace(',', '.'); return t === '' ? NaN : Number(t); };
+// Normalisasi sudut ke rentang 0..360
+const norm = a => ((a % 360) + 360) % 360;
+// Format derajat -> D°MM'SS"
+function dms(a) {
+  if (!isFinite(a)) return '-';
+  const s = Math.round(Math.abs(a) * 3600);
+  const d = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sc = s % 60;
+  return (a < 0 ? '-' : '') + d + '°' + String(m).padStart(2, '0') + "'" + String(sc).padStart(2, '0') + '"';
+}
+const f = (x, k = 3) => isFinite(x) ? x.toFixed(k) : '-';
+
+/* ---------- Rumus dasar tachymetri ---------- */
+// D miring = (BA-BB)·100·cos(90°-V)
+const dMiring = (ba, bb, v) => (ba - bb) * 100 * Math.cos((90 - v) * D2R);
+// D datar  = (BA-BB)·100·cos²(90°-V)
+const dDatar  = (ba, bb, v) => (ba - bb) * 100 * Math.cos((90 - v) * D2R) ** 2;
+// Beda tinggi H = 100·(BA-BB)·cos(90°-V)·sin(90°-V)
+const bedaTinggi = (ba, bb, v) => 100 * (ba - bb) * Math.cos((90 - v) * D2R) * Math.sin((90 - v) * D2R);
+
+/* ---------- Tabel input dinamis ---------- */
+// Target tiap titik pada poligon tertutup (2 baris per titik), i = indeks titik (0-based)
+// Titik 1: [depan=2, belakang=n]; titik lain: [belakang=i, depan=i+2 (atau 1 untuk titik terakhir)]
+function targets(i, n) {
+  if (i === 0) return [{ t: 2, role: 'depan' }, { t: n, role: 'belakang' }];
+  return [{ t: i, role: 'belakang' }, { t: i + 2 > n ? 1 : i + 2, role: 'depan' }];
+}
+// Mengambil seluruh isi sel input (array baris x kolom, berupa string)
+const readCells = () => [...document.querySelectorAll('#tbody tr')].map(tr => [...tr.querySelectorAll('input')].map(i => i.value.trim()));
+
+// Membangun ulang tabel sesuai menu dan jumlah titik. keep=true mempertahankan isian lama.
+function buildTable(keep) {
+  const cfg = MODES[mode];
+  const n = Math.max(cfg.min, Math.min(50, parseInt($('n').value) || cfg.min));
+  const old = keep ? readCells() : [];
+  const nc = mode === 'terbuka' ? 5 : 6;                       // poligon terbuka tanpa kolom TA
+  const lead = mode === 'tertutup' ? ['Titik', 'Target'] : [mode === 'terbuka' ? 'Sisi' : 'Titik'];
+  const names = ['BA', 'BT', 'BB', 'V (°)', 'H (°)', 'TA (m)'].slice(0, nc);
+  $('thead').innerHTML = '<tr>' + [...lead, ...names].map(h => `<th class="px-2 py-2 border-b font-semibold">${h}</th>`).join('') + '</tr>';
+
+  let html = '';
+  const rows = mode === 'tertutup' ? 2 * n : n;
+  for (let k = 0; k < rows; k++) {
+    let td = '';
+    if (mode === 'tertutup') {
+      const i = Math.floor(k / 2), t = targets(i, n)[k % 2];
+      if (k % 2 === 0) td += `<td rowspan="2" class="px-2 border-b font-semibold bg-slate-50">${i + 1}</td>`;
+      td += `<td class="px-2 py-1 border-b whitespace-nowrap">${t.t} <span class="text-xs text-slate-400">(${t.role})</span></td>`;
+    } else {
+      td += `<td class="px-2 py-1 border-b font-semibold bg-slate-50">${mode === 'terbuka' ? (k + 1) + '-' + (k + 2) : k + 1}</td>`;
+    }
+    for (let c = 0; c < nc; c++) {
+      const v = String(old[k]?.[c] ?? '').replace(/"/g, '&quot;');
+      td += `<td class="px-1 py-1 border-b"><input data-r="${k}" data-c="${c}" value="${v}" inputmode="decimal" class="w-24 border rounded px-2 py-1 text-center focus:outline-none focus:ring-2 focus:ring-gold-400"></td>`;
+    }
+    html += `<tr class="${mode === 'tertutup' && k % 2 === 1 ? 'border-b-4 border-slate-100' : ''}">${td}</tr>`;
+  }
+  $('tbody').innerHTML = html;
+}
+
+// Mengganti menu aktif
+function setMode(m) {
+  mode = m;
+  document.querySelectorAll('.tab').forEach(b => {
+    const on = b.dataset.mode === m;
+    b.className = 'tab flex items-center gap-2 px-4 py-2.5 rounded-xl font-semibold transition ' + (on ? 'bg-navy-700 text-white shadow-lg shadow-navy-700/25' : 'bg-white text-navy-700 border border-navy-100 hover:bg-navy-50');
+  });
+  $('desc').textContent = MODES[m].desc;
+  $('nLabel').textContent = MODES[m].label;
+  $('methodBox').classList.toggle('hidden', m !== 'tertutup');
+  $('methodBoxT').classList.toggle('hidden', m !== 'terbuka');
+  $('err').classList.add('hidden'); $('result').classList.add('hidden');
+  if (parseInt($('n').value) < MODES[m].min || !$('n').value) $('n').value = Math.max(4, MODES[m].min);
+  buildTable(false);
+}
+
+/* ---------- Validasi & pembacaan data ---------- */
+// Mengubah isi sel menjadi objek numerik per baris, sekaligus memvalidasi kolom wajib
+function parseRows(cells) {
+  const names = ['BA', 'BT', 'BB', 'V', 'H', 'TA'];
+  const req = mode === 'titik' ? [0, 1, 2, 3, 4, 5] : [0, 2, 3, 4];
+  return cells.map((r, k) => {
+    const o = { ba: num(r[0]), bt: num(r[1]), bb: num(r[2]), v: ang(r[3]), h: ang(r[4]), ta: num(r[5]) };
+    const vals = [o.ba, o.bt, o.bb, o.v, o.h, o.ta];
+    req.forEach(c => { if (!isFinite(vals[c])) throw new Error(`Baris ${k + 1}: kolom ${names[c]} belum diisi atau tidak valid.`); });
+    if (o.ba <= o.bb) throw new Error(`Baris ${k + 1}: BA harus lebih besar dari BB.`);
+    return o;
+  });
+}
+
+/* ---------- 1) PENGUKURAN TITIK ---------- */
+function calcTitik(R, x0, y0) {
+  let x = x0, y = y0;
+  const rows = [], pts = [{ l: 'Awal', x, y }];
+  R.forEach((r, i) => {
+    const dm = dMiring(r.ba, r.bb, r.v), dd = dDatar(r.ba, r.bb, r.v), bH = bedaTinggi(r.ba, r.bb, r.v);
+    const sel = bH - r.bt;                                           // H - BT
+    const elev = sel < 0 ? r.ta - Math.abs(sel) : r.ta + sel;        // Δh = TA - |H-BT| jika minus, TA + (H-BT) jika plus
+    const a = norm(r.h);                                             // acuan Utara: H = azimuth
+    x += dd * Math.sin(a * D2R); y += dd * Math.cos(a * D2R);        // Xn = Xn-1 + D sin α ; Yn = Yn-1 + D cos α
+    pts.push({ l: String(i + 1), x, y });
+    rows.push([i + 1, f(dm), f(dd), f(bH), f(sel), f(elev), dms(a), f(x), f(y)]);
+  });
+  const html = card('Jarak Optis, Beda Tinggi, Elevasi & Koordinat',
+    tbl(['Titik', 'D Miring (m)', 'D Datar (m)', 'Beda Tinggi H (m)', 'H − BT', 'Elevasi Δh (m)', 'Azimuth α', 'X (m)', 'Y (m)'], rows));
+  return { html, plot: { pts, closed: false } };
+}
+
+/* ---------- 2) POLIGON TERBUKA ---------- */
+// metode: 'backsight' = H berreferensi titik sebelumnya (H pertama = azimuth awal)
+//         'azimuth'   = semua H sudah berupa azimuth
+function calcTerbuka(R, x0, y0, metode) {
+  let x = x0, y = y0, a = 0;
+  const rows = [], pts = [{ l: '1', x, y }];
+  R.forEach((r, i) => {
+    const dd = dDatar(r.ba, r.bb, r.v);
+    a = (i === 0 || metode === 'azimuth') ? norm(r.h)                // α awal = H pertama (atau semua H jika sudah azimuth)
+                                          : norm(a - 180 + r.h);     // backsight: αn = αn-1 − 180° + H
+    const dx = dd * Math.sin(a * D2R), dy = dd * Math.cos(a * D2R);
+    x += dx; y += dy;
+    pts.push({ l: String(i + 2), x, y });
+    rows.push([`${i + 1}-${i + 2}`, f(dd), dms(r.h), dms(a), f(dx), f(dy), i + 2, f(x), f(y)]);
+  });
+  const html = card('Jarak Datar, Azimuth & Koordinat',
+    tbl(['Sisi', 'D Datar (m)', 'H', 'Azimuth α', 'ΔX (m)', 'ΔY (m)', 'Titik', 'X (m)', 'Y (m)'], rows));
+  return { html, plot: { pts, closed: false } };
+}
+
+/* ---------- 3) POLIGON TERTUTUP ---------- */
+function calcTertutup(R, x0, y0, metode) {
+  const n = R.length / 2;
+  if (n < 3) throw new Error('Poligon tertutup minimal 3 titik.');
+  // Ambil baris belakang/depan tiap titik (titik 1: baris0 = depan, baris1 = belakang; lainnya kebalikannya)
+  const dep = i => R[2 * i + (i === 0 ? 0 : 1)], bel = i => R[2 * i + (i === 0 ? 1 : 0)];
+
+  // --- Langkah 1: Jarak datar sisi i → i+1 = rata-rata bidikan depan di i & belakang di i+1 (pergi-pulang)
+  const dP = [], dQ = [], D = [];
+  for (let i = 0; i < n; i++) {
+    const p = dDatar(dep(i).ba, dep(i).bb, dep(i).v), q = dDatar(bel((i + 1) % n).ba, bel((i + 1) % n).bb, bel((i + 1) % n).v);
+    dP.push(p); dQ.push(q); D.push((p + q) / 2);
+  }
+  const sumD = D.reduce((s, v) => s + v, 0);
+
+  // --- Langkah 2-4: sudut dalam, koreksi, azimuth
+  let beta = [], betaK = [], alpha = [], html = '', sumB = 0, fB = 0, closeAz = '';
+  if (metode === 'sudut') {
+    beta = Array.from({ length: n }, (_, i) => {
+      const hb = norm(bel(i).h), hd = norm(dep(i).h);
+      return hd > hb ? hb - hd + 360 : hb - hd;                      // β = Hb − Hd (+360° jika Hd lebih besar)
+    });
+    sumB = beta.reduce((s, v) => s + v, 0);
+    const target = (n - 2) * 180;
+    fB = sumB - target;
+    betaK = beta.map(b => b + (target - sumB) / n);                  // β' = β + ((n−2)·180° − Σβ)/n
+    alpha[0] = norm(dep(0).h);                                       // azimuth awal = H awal
+    for (let i = 1; i < n; i++) alpha[i] = norm(alpha[i - 1] + 180 - betaK[i]);   // αn = αn-1 + 180° − β'
+    closeAz = norm(alpha[n - 1] + 180 - betaK[0]);                   // pengecekan: harus kembali ke α awal
+    html += card('Sudut Dalam & Koreksi', tbl(['Titik', 'H belakang', 'H depan', 'β', 'Koreksi', "β'"],
+      beta.map((b, i) => [i + 1, dms(norm(bel(i).h)), dms(norm(dep(i).h)), dms(b), f((target - sumB) / n * 3600, 1) + '"', dms(betaK[i])])
+        .concat([['Σ', '', '', dms(sumB), '', dms(betaK.reduce((s, v) => s + v, 0))]])));
+  } else {
+    for (let i = 0; i < n; i++) alpha[i] = norm(dep(i).h);           // metode azimuth langsung: H = azimuth sisi i→i+1
+  }
+
+  // --- Langkah 5: selisih koordinat, kesalahan keliling, koreksi proporsional
+  const dX = D.map((d, i) => d * Math.sin(alpha[i] * D2R)), dY = D.map((d, i) => d * Math.cos(alpha[i] * D2R));
+  const sX = dX.reduce((s, v) => s + v, 0), sY = dY.reduce((s, v) => s + v, 0);
+  // f(x) = X_akhir − X_awal − ΣΔX  (poligon tertutup: X_akhir = X_awal). Idem f(y).
+  const fx = 0 - sX, fy = 0 - sY;
+  // Koreksi sisi = (D/ΣD)·f. Tanda dipilih agar ΣΔX' = 0 (poligon benar-benar menutup).
+  const dXk = dX.map((v, i) => v + D[i] / sumD * fx), dYk = dY.map((v, i) => v + D[i] / sumD * fy);
+
+  // Koordinat akhir: Xn = Xn-1 + ΔX terkoreksi
+  const pts = [{ l: '1', x: x0, y: y0 }];
+  for (let i = 0; i < n - 1; i++) pts.push({ l: String(i + 2), x: pts[i].x + dXk[i], y: pts[i].y + dYk[i] });
+
+  // --- Langkah 6: luas (Gauss / Shoelace) = ½|Σ Xi (Yi+1 − Yi−1)|
+  let s = 0;
+  for (let i = 0; i < n; i++) s += pts[i].x * (pts[(i + 1) % n].y - pts[(i - 1 + n) % n].y);
+  const luas = Math.abs(s) / 2;
+
+  html += card('Jarak, Azimuth & Koordinat Terkoreksi', tbl(
+    ['Sisi', 'D pergi', 'D pulang', 'D rata-rata', 'Azimuth α', 'ΔX', 'ΔY', "ΔX'", "ΔY'", 'Titik', 'X (m)', 'Y (m)'],
+    D.map((d, i) => [`${i + 1}-${(i + 1) % n + 1}`, f(dP[i]), f(dQ[i]), f(d), dms(alpha[i]), f(dX[i]), f(dY[i]), f(dXk[i]), f(dYk[i]),
+      (i + 1) % n + 1, f((i + 1 < n ? pts[i + 1] : pts[0]).x), f((i + 1 < n ? pts[i + 1] : pts[0]).y)])));
+
+  const fl = Math.hypot(fx, fy);
+  const kv = (k, v) => `<div class="kv bg-slate-50 border rounded-lg p-2"><div class="text-xs text-slate-500">${k}</div><div class="font-semibold">${v}</div></div>`;
+  html += card('Ringkasan', `<div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+    ${kv('ΣD (keliling)', f(sumD) + ' m')}${kv('ΣΔX / ΣΔY', f(sX, 4) + ' / ' + f(sY, 4))}
+    ${kv('f(x) / f(y)', f(fx, 4) + ' / ' + f(fy, 4))}${kv('Ketelitian linear', fl > 1e-9 ? '1 : ' + Math.round(sumD / fl) : 'sempurna')}
+    ${metode === 'sudut' ? kv('Σβ (seharusnya ' + (n - 2) * 180 + '°)', dms(sumB)) + kv('Kesalahan sudut fβ', f(fB * 3600, 1) + '"') + kv('Cek azimuth awal', dms(closeAz) + ' (awal ' + dms(alpha[0]) + ')') : ''}
+    <div class="kv bg-emerald-50 border border-emerald-200 rounded-lg p-2 col-span-2"><div class="text-xs text-emerald-700">Luas Area</div><div class="font-bold text-emerald-800 text-lg">${f(luas)} m² <span class="text-sm font-normal">(${f(luas / 10000, 4)} ha)</span></div></div>
+  </div>`);
+  return { html, plot: { pts, closed: true, luas } };
+}
+
+/* ---------- Helper tampilan hasil ---------- */
+const tbl = (h, rows) => `<div class="overflow-x-auto"><table class="min-w-full text-sm text-center border border-slate-200"><thead class="bg-navy-800 text-white"><tr>${h.map(x => `<th class="px-2 py-1.5 border border-slate-200">${x}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr class="odd:bg-white even:bg-navy-50">${r.map(x => `<td class="px-2 py-1 border border-slate-200 whitespace-nowrap">${x}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+const card = (t, body) => `<div class="space-y-2"><h3 class="font-semibold text-navy-800 border-l-4 border-gold-500 pl-2">${t}</h3>${body}</div>`;
+
+/* ---------- Visualisasi Canvas 2D (X = Timur, Y = Utara) ---------- */
+function draw() {
+  if (!lastPlot) return;
+  const { pts, closed } = lastPlot, cv = $('cv'), dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth, H = Math.round(Math.min(W * 0.75, 560));
+  cv.width = W * dpr; cv.height = H * dpr; cv.style.height = H + 'px';
+  const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0); g.fillStyle = '#fff'; g.fillRect(0, 0, W, H);
+
+  const xs = pts.map(p => p.x), ys = pts.map(p => p.y), pad = 70;
+  const minX = Math.min(...xs), maxX = Math.max(...xs), minY = Math.min(...ys), maxY = Math.max(...ys);
+  const rx = (maxX - minX) || 1, ry = (maxY - minY) || 1;
+  const s = Math.min((W - 2 * pad) / rx, (H - 2 * pad) / ry);        // skala sama untuk X & Y
+  const ox = pad + ((W - 2 * pad) - rx * s) / 2, oy = pad + ((H - 2 * pad) - ry * s) / 2;
+  const tx = x => ox + (x - minX) * s, ty = y => H - (oy + (y - minY) * s);
+
+  // Grid + label sumbu
+  const step = (v => { const p = 10 ** Math.floor(Math.log10(v)), m = v / p; return (m < 1.5 ? 1 : m < 3.5 ? 2 : m < 7.5 ? 5 : 10) * p; })(Math.max(rx, ry) / 5);
+  g.strokeStyle = '#e2e8f0'; g.fillStyle = '#94a3b8'; g.font = '10px sans-serif'; g.lineWidth = 1;
+  g.textAlign = 'center';
+  for (let v = Math.ceil((minX - ox / s) / step) * step; tx(v) < W; v += step) { if (tx(v) < 0) continue; g.beginPath(); g.moveTo(tx(v), 0); g.lineTo(tx(v), H); g.stroke(); g.fillText(+v.toFixed(2), tx(v), H - 4); }
+  g.textAlign = 'left';
+  for (let v = Math.ceil((minY - oy / s) / step) * step; ty(v) > 0; v += step) { if (ty(v) > H) continue; g.beginPath(); g.moveTo(0, ty(v)); g.lineTo(W, ty(v)); g.stroke(); g.fillText(+v.toFixed(2), 4, ty(v) - 3); }
+
+  // Jalur / bidang
+  g.beginPath(); pts.forEach((p, i) => i ? g.lineTo(tx(p.x), ty(p.y)) : g.moveTo(tx(p.x), ty(p.y)));
+  if (closed) { g.closePath(); g.fillStyle = 'rgba(242,176,30,.16)'; g.fill(); }
+  g.strokeStyle = '#1f3c64'; g.lineWidth = 2.5; g.stroke();
+
+  // Titik + label koordinat
+  pts.forEach((p, i) => {
+    g.beginPath(); g.arc(tx(p.x), ty(p.y), 5, 0, 7);
+    g.fillStyle = i === 0 ? '#16a34a' : '#e11d48'; g.fill();
+    g.fillStyle = '#0f172a'; g.font = 'bold 12px sans-serif'; g.textAlign = 'left'; g.fillText(p.l, tx(p.x) + 8, ty(p.y) - 8);
+    g.fillStyle = '#475569'; g.font = '10px sans-serif'; g.fillText(`(${f(p.x, 2)}, ${f(p.y, 2)})`, tx(p.x) + 8, ty(p.y) + 5);
+  });
+
+  // Penunjuk arah Utara
+  g.strokeStyle = '#334155'; g.fillStyle = '#334155'; g.lineWidth = 2;
+  g.beginPath(); g.moveTo(W - 30, 62); g.lineTo(W - 30, 22); g.lineTo(W - 36, 32); g.moveTo(W - 30, 22); g.lineTo(W - 24, 32); g.stroke();
+  g.font = 'bold 12px sans-serif'; g.textAlign = 'center'; g.fillText('U', W - 30, 78);
+}
+window.addEventListener('resize', draw);
+
+/* ---------- Data contoh ---------- */
+const SAMPLES = {
+  titik: { n: 3, rows: [
+    ['1.600', '1.400', '1.200', '88 30 00', '45 00 00', '1.40'],
+    ['1.550', '1.400', '1.250', '91 15 00', '120 30 00', '1.40'],
+    ['1.700', '1.450', '1.200', '87 45 00', '210 15 00', '1.40']] },
+  terbuka: { n: 3, rows: [
+    ['1.600', '1.400', '1.200', '90 00 00', '60 00 00'],
+    ['1.550', '1.400', '1.250', '90 00 00', '170 00 00'],
+    ['1.700', '1.450', '1.200', '90 00 00', '185 00 00']] },
+  // Persegi panjang 40 m x 30 m dengan sedikit kesalahan sudut (Σβ lebih 20")
+  tertutup: { n: 4, rows: [
+    ['1.600', '1.400', '1.200', '90 00 00', '90 00 00', '1.40'], ['1.550', '1.400', '1.250', '90 00 00', '180 00 20', '1.40'],
+    ['1.600', '1.400', '1.200', '90 00 00', '270 00 10', '1.40'], ['1.550', '1.400', '1.250', '90 00 00', '180 00 00', '1.40'],
+    ['1.550', '1.400', '1.250', '90 00 00', '0 00 00', '1.40'],   ['1.600', '1.400', '1.200', '90 00 00', '270 00 00', '1.40'],
+    ['1.600', '1.400', '1.200', '90 00 00', '90 00 00', '1.40'],  ['1.550', '1.400', '1.250', '90 00 00', '0 00 10', '1.40']] }
+};
+
+/* ---------- Ekspor Excel & PDF ---------- */
+let lastMeta = null;
+const NAMA = { titik: 'Pengukuran Titik', terbuka: 'Poligon Terbuka', tertutup: 'Poligon Tertutup' };
+
+// Menyimpan salinan data input + parameter saat tombol Hitung ditekan
+function snapshot(x0, y0) {
+  const cells = readCells(), n = mode === 'tertutup' ? cells.length / 2 : cells.length;
+  const nc = mode === 'terbuka' ? 5 : 6;
+  const head = [mode === 'tertutup' ? 'Titik' : mode === 'terbuka' ? 'Sisi' : 'Titik'].concat(mode === 'tertutup' ? ['Target'] : [],
+    ['BA', 'BT', 'BB', 'V', 'H', 'TA (m)'].slice(0, nc));
+  const rows = cells.map((r, k) => {
+    if (mode === 'tertutup') { const i = Math.floor(k / 2), t = targets(i, n)[k % 2]; return [i + 1, t.t + ' (' + t.role + ')', ...r]; }
+    return [mode === 'terbuka' ? `${k + 1}-${k + 2}` : k + 1, ...r];
+  });
+  const metode = mode === 'tertutup' ? (document.querySelector('input[name=metode]:checked').value === 'sudut' ? 'Sudut Dalam (Backsight-Foresight)' : 'Azimuth Langsung')
+               : mode === 'terbuka' ? (document.querySelector('input[name=metodeT]:checked').value === 'backsight' ? 'H berreferensi backsight (H pertama = azimuth)' : 'H sudah azimuth')
+               : '-';
+  return { mode, x0, y0, metode, head, rows, time: new Date() };
+}
+const stamp = d => d.toISOString().slice(0, 10).replace(/-/g, '');
+const showErr = m => { $('err').textContent = m; $('err').classList.remove('hidden'); $('err').scrollIntoView({ behavior: 'smooth' }); };
+
+// Ekspor semua tabel hasil (+ data input & ringkasan) ke satu file .xlsx
+function exportExcel() {
+  if (!lastMeta) return;
+  if (!window.XLSX) return showErr('Pustaka Excel (SheetJS) belum termuat. Periksa koneksi internet lalu muat ulang halaman.');
+  const M = lastMeta, wb = XLSX.utils.book_new();
+
+  // Sheet 1: info + ringkasan
+  const info = [['OlahIUT - ' + NAMA[M.mode]], ['Tanggal', M.time.toLocaleString('id-ID')], ['X0 (m)', M.x0], ['Y0 (m)', M.y0], ['Metode', M.metode]];
+  document.querySelectorAll('#out .kv').forEach(d => info.push([d.children[0].textContent, d.children[1].textContent.replace(/\s+/g, ' ').trim()]));
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(info), 'Ringkasan');
+
+  // Sheet 2: data input
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([M.head, ...M.rows]), 'Data Input');
+
+  // Sheet berikutnya: tiap tabel hasil
+  document.querySelectorAll('#out > div').forEach(c => {
+    const t = c.querySelector('table'); if (!t) return;
+    const name = c.querySelector('h3').textContent.replace(/[\\/?*\[\]:&]/g, '').slice(0, 31);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.table_to_sheet(t), name);
+  });
+  XLSX.writeFile(wb, `OlahIUT_${M.mode}_${stamp(M.time)}.xlsx`);
+}
+
+// Ekspor gambar visualisasi (canvas) ke PDF A4
+function exportPDF() {
+  if (!lastMeta || !lastPlot) return;
+  if (!window.jspdf) return showErr('Pustaka PDF (jsPDF) belum termuat. Periksa koneksi internet lalu muat ulang halaman.');
+  const M = lastMeta, cv = $('cv');
+  const doc = new window.jspdf.jsPDF({ orientation: cv.width >= cv.height ? 'l' : 'p', unit: 'mm', format: 'a4' });
+  const pw = doc.internal.pageSize.getWidth(), ph = doc.internal.pageSize.getHeight(), m = 12;
+  doc.setFontSize(15); doc.text('OlahIUT - Visualisasi ' + NAMA[M.mode], m, 15);
+  doc.setFontSize(9);
+  let sub = `Koordinat awal (${M.x0}, ${M.y0}) | ${M.time.toLocaleString('id-ID')}`;
+  if (M.mode !== 'titik') sub += ` | Metode: ${M.metode}`;
+  if (M.mode === 'tertutup') sub += ` | Luas: ${lastPlot.luas.toFixed(3)} m2`;
+  doc.text(sub, m, 21);
+  const ratio = cv.width / cv.height, maxW = pw - 2 * m, maxH = ph - 28 - m;
+  const w = Math.min(maxW, maxH * ratio), h = w / ratio;
+  doc.addImage(cv.toDataURL('image/png'), 'PNG', m, 26, w, h);
+  doc.save(`OlahIUT_${M.mode}_visualisasi_${stamp(M.time)}.pdf`);
+}
+
+/* ---------- Event handler ---------- */
+document.querySelectorAll('.tab').forEach(b => b.onclick = () => setMode(b.dataset.mode));
+$('n').addEventListener('input', () => { if ($('n').value) buildTable(true); });
+
+$('btnContoh').onclick = () => {
+  const sm = SAMPLES[mode];
+  $('n').value = sm.n; $('x0').value = ''; $('y0').value = '';
+  buildTable(false);
+  sm.rows.forEach((r, k) => r.forEach((v, c) => { const el = document.querySelector(`input[data-r="${k}"][data-c="${c}"]`); if (el) el.value = v; }));
+};
+$('btnReset').onclick = () => { $('x0').value = ''; $('y0').value = ''; $('result').classList.add('hidden'); $('err').classList.add('hidden'); buildTable(false); };
+
+$('btnHitung').onclick = () => {
+  $('err').classList.add('hidden');
+  try {
+    const x0 = isFinite(num($('x0').value)) ? num($('x0').value) : 0;   // default 0 jika kosong
+    const y0 = isFinite(num($('y0').value)) ? num($('y0').value) : 0;
+    const R = parseRows(readCells());
+    const res = mode === 'titik' ? calcTitik(R, x0, y0)
+              : mode === 'terbuka' ? calcTerbuka(R, x0, y0, document.querySelector('input[name=metodeT]:checked').value)
+              : calcTertutup(R, x0, y0, document.querySelector('input[name=metode]:checked').value);
+    $('out').innerHTML = res.html; lastPlot = res.plot;
+    lastMeta = snapshot(x0, y0);
+    $('result').classList.remove('hidden');
+    draw(); $('result').scrollIntoView({ behavior: 'smooth' });
+  } catch (e) { $('err').textContent = e.message; $('err').classList.remove('hidden'); }
+};
+
+$('btnExcel').onclick = exportExcel;
+$('btnPdf').onclick = exportPDF;
+setMode('titik');   // tampilan awal
+</script>
+</body>
+</html>
